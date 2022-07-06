@@ -1,0 +1,131 @@
+import React, { useState, useEffect } from "react";
+import { motion } from "framer-motion";
+import { FiShare2 } from "react-icons/fi";
+import { AiFillGithub } from "react-icons/ai";
+import { urlFor, client } from "../../client";
+import "./work.scss";
+
+const Work = () => {
+  const [activeFilter, setActiveFilter] = useState("All");
+  const [animateCard, setAnimateCard] = useState({ y: 0, opacity: 1 });
+  const [filterWork, setFilterWork] = useState([]);
+  const [works, setWorks] = useState([]);
+
+  useEffect(() => {
+    const query = '*[_type == "works"]';
+
+    client.fetch(query).then((data) => {
+      setWorks(data);
+      setFilterWork(data);
+    });
+  }, []);
+
+  const handleWorkFilter = (item) => {
+    setActiveFilter(item);
+    setAnimateCard([{ y: 100, opacity: 0 }]);
+
+    setTimeout(() => {
+      setAnimateCard([{ y: 0, opacity: 1 }]);
+
+      if (item === "All") {
+        setFilterWork(works);
+      } else {
+        setFilterWork(works.filter((work) => work.tags.includes(item)));
+      }
+    }, 500);
+  };
+
+  return (
+    <div id="Work">
+      <h2 className="head-text-work">
+        My <span>&nbsp;Projects </span>
+        <span className="ui">&nbsp;Section</span>
+      </h2>
+      <div className="app__works">
+        {[
+          "UI/UX",
+          "WEB APP",
+          "ANDROID DEVELOPMENT",
+          "FRONTEND DEVELOPMENT",
+          "All",
+        ].map((item, index) => (
+          <button
+            key={index}
+            onClick={() => handleWorkFilter(item)}
+            className={`app__work-filter-item app__flex p-text ${
+              activeFilter === item ? "item-active" : ""
+            }`}
+          >
+            {item}
+          </button>
+        ))}
+      </div>
+      <motion.div
+        animate={animateCard}
+        transition={{ duration: 0.5, delayChildren: 0.5 }}
+        className="app__work-portfolio"
+      >
+        {filterWork.map((work, index) => (
+          <div className="app__work-item app__flex" key={index}>
+            <div className="app__work-img app__flex">
+              <img src={urlFor(work.imgUrl)} alt="img" />
+              <motion.div
+                whileHover={{ opacity: [0, 1] }}
+                transition={{
+                  duration: 0.5,
+                  ease: "easeInOut",
+                  staggerChildren: 0.5,
+                }}
+                className="app__work-hover app__flex"
+              >
+                <a
+                  title="Visit Site"
+                  href={work.projectlink}
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <motion.div
+                    whileHover={{ scale: [1, 0.9] }}
+                    whileInView={{ scale: [0, 1] }}
+                    transition={{ duration: 0.3 }}
+                    className="app__flex"
+                  >
+                    <FiShare2 />
+                  </motion.div>
+                </a>
+                <a
+                  title="Github Repo"
+                  href={work.codelink}
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <motion.div
+                    whileHover={{ scale: [1, 0.9] }}
+                    whileInView={{ scale: [0, 1] }}
+                    transition={{ duration: 0.2 }}
+                    className="app__flex"
+                  >
+                    <AiFillGithub />
+                  </motion.div>
+                </a>
+              </motion.div>
+            </div>
+
+            <div className="app__work-tag app__flex">
+              <p className="p-text">{work.tags[0]}</p>
+            </div>
+
+            <div className="app__work-content app__flex">
+              <h3 className="bold-text">{work.title}</h3>
+              <p className="p-text" style={{ marginTop: 10 }}>
+                {work.description}
+              </p>
+            </div>
+          </div>
+        ))}
+      </motion.div>
+    </div>
+  );
+};
+
+export default Work;

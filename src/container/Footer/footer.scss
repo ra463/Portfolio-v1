@@ -1,0 +1,334 @@
+#Contact {
+  background-image: linear-gradient(to top, #ffffff 0%, #e7e7e7 100%);
+  width: 100%;
+}
+.contact-box {
+  display: flex;
+  flex-direction: row;
+  padding: 2rem;
+  justify-content: space-between;
+  align-items: center;
+  margin: auto;
+  background-color: #efe3fd;
+  width: 60%;
+  position: relative;
+  margin-bottom: -25px;
+  bottom: 4rem;
+  border-radius: 15px;
+  border: 5px solid aliceblue;
+
+  p:nth-child(1) {
+    font-size: 1.6rem;
+    font-weight: bold;
+    color: #958dde;
+  }
+  p:nth-child(2) {
+    font-size: 1.6rem;
+    font-weight: bold;
+    color: #6254f3;
+  }
+  a {
+    font-weight: bold;
+    font-size: 1.5rem;
+    background-color: var(--secondary-color);
+    color: white;
+    padding: 0.3rem 1rem;
+    border-radius: 0.5rem;
+    text-decoration: none;
+    transition: all 0.2s ease;
+
+    &:active {
+      transform: scale(0.8);
+    }
+  }
+
+  @media (max-width: 450px) {
+    width: 90%;
+    p:nth-child(1) {
+      font-size: 1rem;
+    }
+    p:nth-child(2) {
+      font-size: 1rem;
+    }
+    a {
+      font-size: 1rem;
+    }
+  }
+}
+.Contact-container {
+  display: flex;
+  margin: 0 3rem;
+  justify-content: space-around;
+  margin-bottom: 0;
+
+  .social {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 30%;
+
+    .ui {
+      font-weight: bold;
+      font-size: 1.5rem;
+      background-color: var(--secondary-color);
+      color: white;
+      padding: 0.3rem 1rem;
+      border-radius: 0.5rem;
+    }
+
+    h3 {
+      font-size: 1.6rem;
+      margin-top: 0.35rem;
+
+      div {
+        margin-top: 1.5rem;
+      }
+    }
+
+    ul {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      margin-top: 1rem;
+
+      li {
+        list-style: none;
+        margin: 0 2rem;
+        list-style: none;
+        margin: 0 2rem;
+        background: white;
+        border-radius: 50%;
+        margin-bottom: 1rem;
+
+        a {
+          font-size: 1.5rem;
+          padding: 0.8rem;
+          display: flex;
+          border-radius: 50%;
+        }
+      }
+    }
+  }
+
+  @media (max-width: 950px) {
+    margin: 0;
+  }
+  @media (max-width: 760px) {
+    margin: 0;
+    flex-wrap: wrap;
+    .social {
+      width: 38%;
+    }
+  }
+  @media (max-width: 450px) {
+    margin: 0;
+    flex-wrap: wrap;
+    .social {
+      width: 100%;
+      h3 {
+        font-size: 1.2rem;
+      }
+
+      ul {
+        li {
+          margin: 0 1.5rem;
+        }
+      }
+    }
+  }
+}
+
+.contact-info-item {
+  display: flex;
+  flex-direction: column;
+  width: 46%;
+
+  .contact-card {
+    margin-top: 0.35rem;
+    span {
+      font-weight: bold;
+      font-size: 1.5rem;
+      background-color: var(--secondary-color);
+      color: white;
+      padding: 0.3rem 1rem;
+      border-radius: 0.5rem;
+    }
+    form {
+      display: flex;
+      flex-direction: column;
+      margin: auto;
+      width: 80%;
+      margin-top: 2rem;
+
+      input {
+        padding: 0.8rem;
+        margin-bottom: 1rem;
+        outline: none;
+        border-radius: 10px;
+        border-color: #9400d387;
+      }
+      textarea {
+        border: 2px solid;
+        border-radius: 10px;
+        border-color: #9400d387;
+        padding: 0.5rem;
+        height: 85px;
+      }
+      .contact-form-btn {
+        margin-top: 1rem;
+        display: flex;
+        justify-content: space-between;
+
+        button {
+          font-weight: bold;
+          font-size: 1.2rem;
+          padding: 0.3rem 4rem;
+          transition: all 0.2s ease-in-out;
+          border-radius: 0.5rem;
+
+          &:active {
+            transform: scale(0.8);
+          }
+        }
+        .submit {
+          border: 2px solid #ff0157;
+          color: #ff0157;
+          background: white;
+        }
+        .reset {
+          border: 2px solid #ff0157;
+          color: #ff0157;
+          background: #ff01561e;
+        }
+      }
+    }
+  }
+
+  @media (max-width: 950px) {
+    .contact-card {
+      form {
+        .contact-form-btn {
+          button {
+            padding: 0.3rem 2.5rem;
+          }
+        }
+      }
+    }
+  }
+  @media (max-width: 760px) {
+    .contact-card {
+      form {
+        .contact-form-btn {
+          button {
+            padding: 0.3rem 1rem;
+          }
+        }
+      }
+    }
+  }
+  @media (max-width: 450px) {
+    width: 100%;
+    margin-top: 2rem;
+
+    .contact-card {
+      form {
+        width: 70%;
+
+        .contact-form-btn {
+          button {
+            padding: 0.3rem 2.5rem;
+          }
+        }
+      }
+    }
+  }
+}
+
+.contact-social {
+  margin-top: 0.35rem;
+  span {
+    font-weight: bold;
+    font-size: 1.5rem;
+    background-color: var(--secondary-color);
+    color: white;
+    padding: 0.3rem 1rem;
+    border-radius: 0.5rem;
+  }
+  .contact-info-text {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 2.3rem;
+
+    p {
+      display: flex;
+      padding: 1rem;
+      justify-content: center;
+      align-items: center;
+      background-color: #fbace82b;
+      border-radius: 12px;
+      border: 2px solid;
+      border-color: #fbace8;
+      width: 100%;
+      margin-bottom: 1rem;
+
+      &:nth-child(2) {
+        border: 2px solid #25a71a;
+        background-color: #2bff190d;
+      }
+
+      img {
+        width: 32px;
+      }
+      a {
+        margin-left: 9px;
+        text-decoration: none;
+        font-size: 17px;
+      }
+    }
+  }
+
+  @media (max-width: 760px) {
+    margin-top: 2rem;
+  }
+  @media (max-width: 450px) {
+    margin-top: 2rem;
+  }
+}
+
+hr {
+  margin: 2rem auto;
+  margin-bottom: 0.5rem;
+}
+.copyright {
+  font-weight: bold;
+}
+.insta {
+  padding: 0.5rem;
+  svg {
+    background: radial-gradient(
+      circle at 30% 107%,
+      #fdf497 0%,
+      #fdf497 5%,
+      #fd5949 45%,
+      #d6249f 60%,
+      #285aeb 90%
+    );
+    color: white;
+    font-size: 1.8rem;
+    padding: 0.3rem 0px;
+    border-radius: 50%;
+  }
+}
+.submit-succes {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  h3 {
+    font-size: 1.3rem;
+  }
+}

@@ -1,0 +1,248 @@
+.app__skills-container {
+  margin: 3rem 4.5rem;
+  max-width: 95%;
+
+  @media (max-width: 450px) {
+    margin: 3rem;
+  }
+}
+.app__skills-list {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  border-radius: 35px;
+  padding: 3rem 0;
+  background-color: white;
+
+  span {
+    transform: rotate(270deg);
+    font-weight: bold;
+    font-size: 1.5rem;
+    background-color: var(--secondary-color);
+    color: white;
+    padding: 0.3rem 1rem;
+    border-radius: 0.5rem;
+  }
+
+  .app__skills-desc {
+    width: 43%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    .app__skills {
+      width: 15%;
+      margin: 1.5rem;
+
+      .app__flex {
+        font-size: 2rem;
+        border-radius: 50%;
+        width: 65%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 0.5rem;
+      }
+
+      .p-text {
+        text-align: left;
+        color: slategray;
+        font-size: 14px;
+        margin-top: 6px;
+      }
+    }
+  }
+
+  .app__skills-items {
+    width: 43%;
+
+    .para {
+      font-size: 1.3rem;
+
+      p {
+        text-align: initial;
+        margin-bottom: 1rem;
+      }
+    }
+  }
+
+  @media (max-width: 900px) {
+    flex-direction: column;
+    span {
+      transform: none;
+    }
+    .app__skills-desc {
+      width: 100%;
+      margin-top: 1rem;
+
+      .app__skills {
+        .app__flex {
+          margin: auto;
+        }
+      }
+    }
+    .app__skills-items {
+      width: 80%;
+      margin-top: 1rem;
+    }
+  }
+
+  @media (max-width: 450px) {
+    .app__skills-desc {
+      .app__skills {
+        .app__flex {
+          width: 100%;
+        }
+      }
+    }
+    .app__skills-items {
+      width: 90%;
+      .para {
+        font-size: 1.1rem;
+        padding: 0 1rem;
+      }
+    }
+  }
+}
+
+.ex-p {
+  transform: rotate(270deg);
+  font-weight: bold;
+  font-size: 1.5rem;
+  background-color: var(--secondary-color);
+  color: white;
+  padding: 0.3rem 1rem;
+  border-radius: 0.5rem;
+}
+
+.app__skills-exp-container {
+  margin: 2rem;
+  max-width: 95%;
+}
+
+.app__skills-exp {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  flex-wrap: wrap;
+  transition: all 0.3s ease;
+
+  .app__skills-exp-work {
+    width: 45%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 1.5rem;
+    margin: 1rem;
+    background-color: white;
+    border-radius: 25px;
+
+    &:hover {
+      box-shadow: 0 0 25px rgba(0, 0, 0, 0.2);
+    }
+
+    .first-container {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      padding-bottom: 1rem;
+      border-bottom: 1px solid;
+
+      div {
+        display: flex;
+        align-items: center;
+        width: 35%;
+        justify-content: space-between;
+
+        img {
+          width: 70px;
+        }
+        h3 {
+          font-size: 1.3rem;
+          margin-top: 0;
+          font-style: normal;
+          color: #008073;
+        }
+      }
+      p {
+        font-size: 1.3rem;
+        color: #795548;
+        font-style: normal;
+        margin-top: 0;
+      }
+    }
+
+    .p-title {
+      font-size: 13px;
+      margin-top: 1rem;
+      font-style: italic;
+      color: #666;
+    }
+    ul {
+      margin: 1rem 0;
+
+      li {
+        text-align: initial;
+        margin-left: 17px;
+      }
+    }
+
+    .p-date {
+      font-style: normal;
+      font-weight: bold;
+      text-align: left;
+      font-size: 15px;
+      color: lightseagreen;
+    }
+  }
+
+  @media (max-width: 950px) {
+    .app__skills-exp-work {
+      width: 90%;
+    }
+  }
+  @media (max-width: 450px) {
+    .app__skills-exp-work {
+      .first-container {
+        div {
+          width: 50%;
+          img {
+            width: 50px;
+          }
+          h3 {
+            font-size: 1.1rem;
+            margin-left: 5px;
+          }
+        }
+        p {
+          font-size: 1rem;
+        }
+      }
+    }
+  }
+}
+
+.app__experience {
+  display: flex;
+  .app__flex {
+    margin: 0 1rem;
+    background: white;
+    cursor: pointer;
+    display: flex;
+    padding: 10px;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+
+    &:hover {
+      background-color: var(--secondary-color);
+      color: white;
+    }
+  }
+}
