@@ -244,7 +244,7 @@ nav > ul {
     right: 0;
     z-index: 5;
     padding: 1rem;
-    width: 70%;
+    width: 30%;
     height: 100vh;
     display: flex;
     flex-direction: column;
@@ -254,11 +254,14 @@ nav > ul {
     box-shadow: 0 0 20px rgba(168, 168, 168, 0.15);
 
     svg {
-      width: 35px;
-      height: 35px;
-      color: var(--secondary-color);
+      width: 40px;
+      height: 40px;
+      padding:0.4rem;
+      background: var(--secondary-color);
+      color: white;
       margin: 0.5rem 1rem;
       margin-left: auto;
+      border-radius: 50%;
     }
     ul {
       list-style: none;
@@ -296,6 +299,12 @@ nav > ul {
 
       a {
         text-decoration: none;
+        font-weight: bold;
+        color: gray;
+
+        &:hover {
+          color: var(--secondary-color);
+        }
       }
     }
   }
