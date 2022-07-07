@@ -44,6 +44,10 @@
   @media (max-width:450px){
     margin: 3rem 2.5rem;
   }
+  
+  @media (max-width:390px){
+    margin: 3rem 2rem;
+  }
 }
 .app__profile-item {
   width: 270px;
@@ -80,5 +84,9 @@
 
   @media (max-width:450px){
     margin: 1.4rem 1rem;
+  }
+  
+  @media (max-width:390px){
+    margin: 1.4rem 0;
   }
 }
