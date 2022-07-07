@@ -118,7 +118,14 @@
     margin: 0;
     flex-wrap: wrap;
     .social {
-      width: 38%;
+      width: 38%;   
+      .ui {
+        font-size: 1.3rem;
+      }
+
+      h3 {
+        font-size: 1.2rem;
+      }
     }
   }
   @media (max-width: 450px) {
@@ -126,6 +133,9 @@
     flex-wrap: wrap;
     .social {
       width: 100%;
+       .ui {
+        font-size: 1.2rem;
+      }
       h3 {
         font-size: 1.2rem;
       }
@@ -218,6 +228,9 @@
   }
   @media (max-width: 760px) {
     .contact-card {
+     span {
+        font-size: 1.3rem;
+      }
       form {
         .contact-form-btn {
           button {
@@ -238,6 +251,17 @@
         .contact-form-btn {
           button {
             padding: 0.3rem 2.5rem;
+          }
+        }
+      }
+    }
+  }
+  @media (max-width: 390px) {
+    .contact-card {
+      form {
+        .contact-form-btn {
+          button {
+            padding: 0.3rem 1.8rem;
           }
         }
       }
@@ -292,9 +316,29 @@
 
   @media (max-width: 760px) {
     margin-top: 2rem;
+    span {
+      font-size: 1.3rem;
+    }
+    .contact-info-text {
+      flex-direction: row;
+      p {
+        margin: 0 1rem;
+      }
+    }
+  }
+  @media (max-width: 530px) {
+    .contact-info-text {
+      flex-direction: column;
+      p:nth-child(2) {
+        margin-top: 1rem;
+      }
+    }
   }
   @media (max-width: 450px) {
     margin-top: 2rem;
+    span {
+      font-size: 1.2rem;
+    }
   }
 }
 
@@ -330,5 +374,8 @@ hr {
 
   h3 {
     font-size: 1.3rem;
+  }
+  @media (max-width: 450px) {
+    margin: 2rem 0;
   }
 }
