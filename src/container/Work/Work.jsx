@@ -80,7 +80,7 @@ const Work = () => {
               >
                 <a
                   title="Visit Site"
-                  href={work.projectlink}
+                  href={work.projectLink}
                   target="_blank"
                   rel="noreferrer"
                 >
@@ -95,7 +95,7 @@ const Work = () => {
                 </a>
                 <a
                   title="Github Repo"
-                  href={work.codelink}
+                  href={work.codeLink}
                   target="_blank"
                   rel="noreferrer"
                 >
