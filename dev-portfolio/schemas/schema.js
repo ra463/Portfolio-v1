@@ -5,7 +5,6 @@ import createSchema from "part:@sanity/base/schema-creator";
 import schemaTypes from "all:part:@sanity/base/schema-type";
 import works from "./works";
 import certificate from "./certificate";
-import brands from "./brands";
 import abouts from "./abouts";
 import skills from "./skills";
 import workExperience from "./workExperience";
@@ -20,7 +19,6 @@ export default createSchema({
   types: schemaTypes.concat([
     works,
     certificate,
-    brands,
     abouts,
     skills,
     workExperience,
