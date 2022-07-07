@@ -96,7 +96,7 @@ const Header = () => {
         <HiMenuAlt1 onClick={() => setToggle(true)} />
         {toggle && (
           <motion.div
-            whileInView={{ x: [300, 0] }}
+            // whileInView={{ x: [300, 0] }}
             transition={{ duration: 0.7, ease: "easeOut" }}
           >
             <HiX onClick={() => setToggle(false)} />
